@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+       <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+</head>
+<body>
+    <div id="root"> 
+        <div class="content-wrap">
+            <header> </header>
+            <main>
+                <div class="slider">Slider</div>
+                <div class="story">story</div>
+                <div class="feature-map">feature-map</div>
+                <div class="more-product">more-product</div>
+                <div class="coffee-magazine">coffee-magazine</div>
+                <div class="lifestyle-stories">lifestyle-stories</div>
+                <div class="subcribe"></div>
+            </main>
+            <footer></footer>
+        </div>
+         
+    </div>  
+</body>
+</html>
