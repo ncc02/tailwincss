@@ -3,11 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop</title>
+  <link rel="icon" href="./img/favicon/cafe.ico" type="image/gif" sizes="16x16">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+      </style>
+    
   <script>
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: {
+            Karla:['Karla', 'sans-serif'],
+          },
           colors: {
             clifford: '#da373d',
           }
@@ -15,13 +24,14 @@
       }
     }
   </script>
+
     <style type="text/tailwindcss">
         @layer utilities {
           .content-auto {
             content-visibility: auto;
           }
         }
-        .custom-top-menu-item   {
+        .custom-top-menu-item   { 
             @apply cursor-pointer py-1 hover:text-gray-800 relative after:absolute after:bottom-0 after:left-0 after:bg-slate-900 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:ease-in-out after:duration-300;
         }
         .custom-icon{
@@ -31,18 +41,22 @@
             @apply text-xs text-center rounded-full px-1.5;
 
         }
+      
       </style>
        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-</head>
+      <script src="./main.js" type="text/javascript"  async>
+
+      </script>
+      </head>
 <body>
     <div id="root"> 
-        <div class="content-wrap max-w-screen-xl text-base mx-auto px-8 bg-slate-200">
+        <div class="content-wrapper font-Karla max-w-screen-xl text-base mx-auto px-8 bg-slate-200">
             <header class="py-6 mx-10">
                 <nav class="flex flex-row justify-between items-center">
                     <div class="logo basis-2/6 text-center text-xl font-semibold">
                         CoffeeStyle.
                     </div>
-                    <ul class=" basis-3/6 flex items-center justify-end gap-8 uppercase text-sm text-gray-500 font-medium">
+                    <ul id="custom-top-menu" class=" basis-3/6 hidden lg:flex lg:items-center lg:justify-end lg:gap-8 uppercase text-sm text-gray-500 font-medium">
                         <li class="">
                             <a href="#" class="custom-top-menu-item">Home</a>
                         </li>
@@ -63,7 +77,7 @@
                         </li>
                     </ul>
                     <ul>
-                        <li class="custom-top-menu-item basis-1/6 justify-start items-center ml-16 uppercase text-sm text-gray-500 font-medium">
+                        <li class="basic-3/6 custom-top-menu-item basis-1/6 justify-end  lg:justify-start items-center ml-16 uppercase text-sm text-gray-500 font-medium">
                         <a href="" class="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="custom-icon">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
@@ -72,9 +86,16 @@
                             <span class="mx-2"> Cart</span>
                               <span class="custom-badge-circle bg-orange-400 text-white"> 7</span>
                             </a>
-                            </li>
+                              </li>
                         
                     </ul>
+                    <div class="basic-1/6 lg:hidden flex items-center cursor-pointer px-2 sm:px-4">
+                      <svg id="custom-toggle-top-menu-icon"   xmlns="http://www.w3.org/2000/svg" class="custom-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                      </svg>
+                      
+
+                    </div>
                 </nav>    
             </header>
             <main>
