@@ -7,9 +7,9 @@ document.addEventListener('click', (e) => {
     topMenu.classList.toggle('hidden');
   }else{
     //Click outside from 
-    if (topMenu.classList.contains('custom-toggle-top-menu-icon')) {
-      topMenu.classList.remove('custom-top-menu');
-    }
+    // if (topMenu.classList.contains('custom-toggle-top-menu-icon')) {
+    //   topMenu.classList.remove('custom-top-menu');
+    // }
   }
     
 }
